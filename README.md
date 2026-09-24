@@ -13,8 +13,8 @@ histogram-based boosting models.
 1,802 songs from DEAM, each described by 520 openSMILE descriptors: the mean and the standard
 deviation over time of 260 base features. The targets are the mean valence and arousal ratings
 on a 1–9 scale. A fixed 20% test split (361 songs) is scored once. Model selection uses
-five-fold cross-validation on the rest, with variance filtering, imputation and scaling fitted
-inside the folds.
+five-fold cross-validation on the rest. Low-variance features are dropped using the training
+split only, and imputation and scaling are fitted inside each fold.
 
 | Target | Best model | MAE | RMSE | R² | 95% bootstrap RMSE interval |
 | --- | --- | ---: | ---: | ---: | ---: |
